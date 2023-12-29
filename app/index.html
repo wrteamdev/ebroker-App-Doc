@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link href="../images/favicon.ico" rel="icon" />
+    <title>Documentation | eBroker</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/stylesheet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Document Wrapper
+        =============================== -->
+    <div id="main-wrapper">
+
+        <!-- Header
+            ============================ -->
+        <header id="header" class="sticky-top">
+            <!-- Navbar -->
+            <nav class="primary-menu navbar navbar-expand-lg bg-light-1 navbar-dropdown-dark">
+                <div class="container-fluid">
+                    <!-- Sidebar Toggler -->
+                    <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none"
+                        type="button"><span></span><span class="w-75"></span><span></span></button>
+                    <!-- Logo -->
+                    <a href="/">
+                        <img src="../images/web/homelogo.svg" width="200" alt="logo" /></a>
+                    <!-- Logo End -->
+                </div>
+            </nav>
+            <!-- Navbar End -->
+        </header>
+        <!-- Header End -->
+
+        <!-- Content
+            ============================ -->
+        <div id="content" role="main">
+
+            <!-- Sidebar Navigation
+                ============================ -->
+            <div class="idocs-navigation bg-light-1 docs-navigation-dark">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#introduction" class="nav-link active">Introduction</a></li>
+
+                    <li class="nav-item"><a href="#firebase" class="nav-link">Firebase</a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#createfirebaseproject">Create Firebase Project</a>
+                                <a class="nav-link" href="#enablephoneauth">Enable Phone Auth</a>
+                                <a class="nav-link" href="#setupnotification">Setup Notification</a>
+                                <a class="nav-link" href="#setupdynamiclink">Setup Firebase Dynamic Link</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="#settings" class="nav-link">App Settings</a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#appname">Change App Name</a>
+                                <a class="nav-link" href="#packagename">Change Package Name</a>
+                                <a class="nav-link" href="#appicon">Change App Icon</a>
+                                <a class="nav-link" href="#appversion">Change App Version</a>
+                                <a class="nav-link" href="#themecolor">Theme Colors</a>
+                                <a class="nav-link" href="#languages">Add Languages</a>
+                                <a class="nav-link" href="#mapapikey">Map API Key and Place API</a>
+                                <a class="nav-link" href="#admob">Setup admob</a>
+
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item"><a href="#othericons" class="nav-link">Other Icons</a></li>
+
+                    <li class="nav-item"><a href="#connectadminpanel" class="nav-link">Connect Admin Panel</a></li>
+                    <li class="nav-item"><a href="#generateapp" class="nav-link">Generate App(Android)</a></li>
+
+                    <br>
+
+
+                    <li class="nav-item"><a href="#support" class="nav-link">Support</a></li>
+                    <li class="nav-item"><a href="#rating" class="nav-link">Your Feedback</a></li>
+                    <li class="nav-item"><a href="#contactus" class="nav-link">Contact Us</a></li>
+
+                </ul>
+            </div>
+
+
+            <!-- Docs Content-->
+            <div class="idocs-content">
+                <div class="container">
+
+                    <!-- Getting Started -->
+                    <section id="introduction">
+                        <h3>Introduction</h3>
+                        <p class="">Thank you for purchasing code. It really means a lot and It's our pleasure to serve
+                            top-notch service to you. Thank you so much for choosing<a href="https://wrteam.in/"
+                                style='color:#3c55d1' target="_blank"> WRTeam </a>. If you have trouble with the code
+                            and documentation please contact to our Support Team <a href="#support"
+                                style="color:#3c55d1">Here</a></p>
+
+                        <p>eBroker is a app to sell rent your properties it basically connects users.</p>
+                        <p>To run the application you need to setup Flutter first.</p>
+                        <p>Here you can see its steps to setup > <a
+                                href="https://docs.flutter.dev/get-started/install">Flutter Setup</a>. </p>
+
+                    </section>
+
+                    <section id="firebase">
+                        <!---Create firebase section-->
+                        <h2>Firebase</h2>
+                        <p>
+                        <h5>Overview</h5>
+                        In order to run your app and enable authentication features, you need to set up a Firebase
+                        project. Follow the steps below to create a Firebase project.
+
+                        </p>
+                        <section id="createfirebaseproject">
+                            <li> Visit <a href="https://firebase.google.com/">Firebase Console.</a></li>
+                            <li>Open your web browser and go to the <a href="https://firebase.google.com/">Firebase
+                                    Console.</a></li>
+
+
+                            <li>Sign In/Create Account:</li>
+
+                            <li> Sign in with your Google account or create a new one.
+                                Click on "Get Started" to set up your first project.
+                                Create a New Project:
+                            </li>
+                            <li> Click on the "Add project" button.
+                                Enter a project name and choose a suitable project ID.
+                                Select your country/region and click "Create Project."</li>
+                            <br>
+                            <img src="../images/app/firebase_create_project.png"></img>
+                            <br>
+                            <br>
+
+                            <li>Tap on the flutter icon</li>
+                            <br>
+                            <img src="../images/app/firebase_flutter.png"></img>
+                            <br>
+                            <br>
+                            <li>Open any IDE (Vs Code, android studio, etc) and paste this commands in there terminal
+                            </li>
+                            <br>
+                            <br>
+                            <img src="../images/app/firebase_command.png">
+
+                            <br>
+                            <br>
+                            <li>Copy and paste both command one by one like this</li>
+                            <br>
+                            <br>
+                            <img src="../images/app/command_run_firebase.png">
+                            <br>
+                            <br>
+
+                            <p>
+                            <h6 style="color: red;">Note:[Make sure to change package name first] <a
+                                    href="#packagename"> Click here</a></h6>
+                            </p>
+                            <li>
+                                Select Android, IOS, and Web
+                            </li>
+                            <br>
+                            <img src="../images/app/select_firebase_platforms.png">
+                            <br>
+                            <br>
+                            <li>Type yes if its asking this type of question and press enter</li>
+                            <br>
+                            <img src="../images/app/override_existing_firebase.png">
+                            </li>
+                            <br>
+
+
+                        </section>
+
+                        <br />
+
+                    </section>
+
+                    <section id="enablephoneauth">
+
+                        <h2>Enable Phone Auth</h2>
+                        <p>
+                        <h5>Overview</h5>
+
+                        You will need to enable firebase auth to work login with OTP if you skip this step you will not
+                        able to login into the app.
+                        <br>
+                        <br>
+                        <li>In the fiebase console go to the Authentication section and turn on tap on the phone login
+                            as shown in this image below</li>
+                        <br>
+                        <br>
+
+
+                        <img src="../images/app/firebase_auth.png"></img>
+                        <br>
+                        <br>
+                        <li>Tap on swith button to enable the firebase phone auth</li> <br><br>
+                        <img src="../images/app/enable_firebase_auth.png"></img>
+                        <br>
+                        <br>
+                        <li>
+                            <b>Note:</b>Please add firebase testing number for the testing purpose or firebase will
+                            temporary
+                            block you if you login multiple time with same number or same device.
+                        </li>
+
+                        <br>
+                        <img src="../images/app/firebase_testing.png"></img>
+                        <br>
+                        <br>
+                        <li>Now you have successfully done the step which i mentioned. But when you add firebase testing
+                            number it will login without any problem but when you will try to add your real number it
+                            will show <b style="color: red;">missing-client-identifier</b></li>
+                        <br>
+                        <p>So how will you solve it?</p>
+                        <p>Please follow the steps which are mentioned below to resolve issue</p>
+
+                        <li>Open the external terminal or IDE terminal(Vs code, andorid studio,etc)</li>
+                        <p>Note: open terminal in project location and write the command written below</p>
+                        <pre>cd android</pre><br>
+                        <pre>./gradlew signinReport</pre>
+                        <p>The result of this will look something like this Copy this SHA1 and SHA256 and add it into
+                            Firebase project settings like shown below</p>
+                        <img src="../images/app/sha_key.png"></img>
+
+                        <br>
+                        <br>
+
+                        <p>Add like this into the firebase project settings</p>
+
+                        <img src="../images/app/add_sha_key.png"></img>
+                        </p>
+
+                    </section>
+                    <section id="setupnotification">
+                        <li>Get server key from your firebase project and set in panel.</li>
+                        <br />
+                        <li>Go to Project Settings -> Cloud Messaging -> Manage API on Google cloud Console.</li>
+                        <br />
+
+                        <img src="../images/app/enable_fcm.png"></img>
+                        <br>
+                        <br>
+                        <br>
+                        <img src="../images/app/fcm_server_key.png"></img>
+                        <br />
+                        <br />
+                        <li>Copy this key</li>
+                        <br />
+                        <img src="../images/app/fcm_server_key_get.png"></img>
+                        <br>
+                        <br>
+
+                        <li> Set here into the Notification FCM key field</li>
+                        <br>
+                        <img src="../images/app/fcm_set_admin.png"></img>
+                        <br>
+                        <br>
+                        <h2>For IOS</h2>
+                        <li>For ios your need to perform below given step </li>
+                        <li>In Xcode, open the project.</li>
+                        <li>In the Project Navigator (the left-hand menu), select the project icon that represents your
+                            app.
+                        </li>
+                        <li>In the top-left corner of the right-hand pane in Xcode, select your app's target.
+                        </li>
+                        <li>Navigate to the Capabilities tab.
+                        </li>
+                        <li>Enable Push Notifications.
+                        </li>
+
+                        <li>Check Remote Notifications and Background Fetch from Enabling Background Modes.
+                        </li>
+                        <br>
+                        <img src="../images/app/xcode_notification.png"></img>
+                        <br>
+                        <li>APNs (Apple's Push Notification service) currently supports two types of connections:
+                            token-based (.p8) and certificate-based (.p12).you can follow either one of them
+                        </li> <br>
+                        <h3>For Token-based (.p8).</h3>
+                        <li>Log in to the Apple Developer Portal.
+                        </li>
+                        <li>Navigate to Certificates, IDs & Profiles > Identifiers > App IDs and click the App ID
+                            associated with your app.
+                        </li>
+                        <li>On the screen for your App ID, check Capabilities > Push Notifications.
+                        </li> <br>
+                        <img src="../images/app/enable_fcm_xcode.png"></img>
+                        <br>
+
+                        <img src="../images/app/xcode_notification_2.png"></img>
+                        <li>Select App ID in next page & click continue.</li>
+                        <li>And then create Development SSL Certificate & Production SSL Certificate by adding CSR
+                            certificate. follow Apple's <a href='https://help.apple.com/developer-account/'> Create a
+                                certificate signing request instructions.</a></li>
+
+
+
+                        <li>Navigate to Certificates, IDs & Profiles > Keys Section and add a Universal key for
+                            Notifications,which you can use for more than one apps as well.</li>
+                        <br>
+                        <img src="../images/app/xcode_identifier.png"></img>
+                        <br>
+                        <br>
+                        <li>Just save and Download & keep it safe, as it will be downloaded only once.</li>
+                        <br>
+                        <img src="../images/app/apn_updated.png"></img>
+                        <li>Then go to Firebase and add this .p8 file along with Your Key ID and Team ID.
+                        </li>
+
+                        <img src="../images/app/add_p8_in_firebase.png"></img>
+
+                        <br>
+
+                    </section>
+                    <br />
+                    </section>
+
+
+                    <section class="docs-section" id="setupdynamiclink">
+                        <h2>How to enable Firebase dynamic links</h2>
+                        <div class="container">
+                            <ol>
+                                <li>GO to firebase console and click on dynamic links</li>
+                                <li>And tap on get started</li>
+                                <br>
+                                <a href="../images/app/deeplink/1.png" data-fslightbox="gallery">
+                                    <img src="../images/app/deeplink/1.png" alt="eBroker"
+                                        class="figure-img img-fluid shadow rounded">
+                                </a>
+                                <br>
+
+                                <li>Set your link name like: projectname.page.link</li>
+                                <br>
+
+                                <a href="../images/app/deeplink/2.png" data-fslightbox="gallery">
+                                    <img src="../images/app/deeplink/2.png" alt="eBroker"
+                                        class="figure-img img-fluid shadow rounded">
+                                </a>
+                                <br>
+
+                                <li>Your link has been created now you can copy link and paste it in your
+                                    lib/settings.dart file. There you will find deepLinkPrefix named variable.</li>
+                                <br>
+
+                                <a href="../images/app/deeplink/3.png" data-fslightbox="gallery">
+                                    <img src="../images/app/deeplink/3.png" alt="eBroker"
+                                        class="figure-img img-fluid shadow rounded">
+                                </a>
+                                <br>
+
+                                <li>Go to info.plist file in ios folder and add this code</li>
+                                <br>
+
+                                <a href="../images/app/deeplink/code.png" data-fslightbox="gallery">
+                                    <img src="../images/app/deeplink/code.png" alt="eBroker"
+                                        class="figure-img img-fluid shadow rounded">
+                                </a>
+                                <br>
+
+                                <div class="rawHTML">
+                                    <key>FirebaseDynamicLinksCustomDomains</key>
+                                    <array>
+                                        <string>https://ebroker.page.link</string>
+                                    </array>
+                                </div>
+                                <br>
+
+                                <li>And open ios folder in XCode and follow this</li>
+                                <br>
+
+                                <a href="../images/app/deeplink/xcode.png" data-fslightbox="gallery">
+                                    <img src="../images/app/deeplink/xcode.png" alt="eBroker"
+                                        class="figure-img img-fluid shadow rounded">
+
+
+
+
+
+
+                                </a>
+                                <p>
+                                <h4>For the android</h4>
+
+
+                                </p>
+                                <p>Copy the link.</p>
+                                <p>Open the settings.dart</p>
+                                <p>There you will see variable static const String deepLinkPrefix =
+                                    "PASTE";</p>
+
+                                <img src="../images/app/deep_link_prefix.png" data-fslightbox="gallery">
+                                <img src="../images/app/deep_link_name.png" data-fslightbox="gallery">
+                                <p>You have succesfully setup dynamic link.!!!</p>
+
+                            </ol>
+
+                        </div>
+                    </section>
+
+                    <section id="settings">
+                        <h1>General app settings</h1>
+                        <section id="appname">
+                            <h3>Change app name</h3>
+                            <li>Go to lib>settings.dart</li>
+                            <br>
+                            <li>There will be variable named <b> applicationName="Your app name"; </b>set the value into
+                                the
+                                " quotes.</li>
+                            <br>
+                            <img src="../images/app/app_name.png" alt="eBroker"
+                                class="figure-img img-fluid shadow rounded">
+                            <br>
+
+                            This will only change display name of minimised app. You have to run following command
+                            to change its actual name.
+                            <br>
+                            <br>
+                            <p>
+                            <div class="command">
+                                flutter pub global activate rename
+                            </div>
+                            <br>
+                            <br>
+                            after this run the next command
+                            <br>
+                            <br>
+
+                            <div class="command">
+                                rename setAppName --targets ios,android --value "YourAppName"
+                            </div>
+                            </p>
+
+
+                        </section>
+                        <br>
+                        <br>
+                        <section id="packagename">
+                            <h3>Change package name</h3>
+                            <li>Go to lib>settings.dart</li>
+                            <br>
+                            <li>There will be variable named <b> androidPackageName="Your package name"; </b>set the
+                                value
+                                into
+                                the
+                                " quotes.</li>
+                            <br>
+
+                            <img src="../images/app/package_name.png" alt="eBroker"
+                                class="figure-img img-fluid shadow rounded">
+
+
+                            <p>
+                                You have to run this command into the terminal to change package name successfully
+                            </p>
+                            <p>
+                            <div class="command">
+                                rename setBundleId --targets android --value "com.example.bundleId"
+                            </div>
+                            </p>
+                            </p>
+
+
+                            <br>
+
+                        </section>
+                        <section id="appicon">
+                            <h3>App Icon change</h3>
+                            <p>
+                                App icon is main element for display so you will need to change it to your branding.
+                            </p>
+                            <p>Add icon into this folder and rename it with 'icon.png' <b style="color: red;">[Note:
+                                    make sure icon name is
+                                    icon.png]</b> </p>
+                            <img src="../images/app/app_icon_folder.png" width="80%" height="50%"
+                                style="height: 50%; width: 36%;">
+                            <p>After that please run this command in terminal [Note: make sure you run 'flutter pub get'
+                                before]</p>
+
+
+                            <p>
+                            <div class="command">
+                                flutter pub run flutter_launcher_icons
+                            </div>
+                            </p>
+                            <p>You have successfully changed icon. If you find any issue in icon change please feel free
+                                to contact us on <a href="https://join.skype.com/invite/Wy96gZvdk2oW">Skype</a></p>
+
+
+
+
+
+                        </section>
+
+                        <section id="appversion">
+                            <h3>Change App version</h3>
+                            <p>
+                                First you need to go to pubspec.yaml
+                            </p>
+                            <p>
+                                Then you will have to change version according to the version which is show in image
+                                below.
+                            <p>
+                                First have a look at how version works.
+                            </p>
+                            <p>
+
+                                Here you can see <b>1.0.8+23</b> . Here 1.0.8 is the version name which you can see. and
+                                the +23 is the version code. You will have to increment the number after + everytime
+                                when you need to upload on store
+                            </p>
+                            <p>
+                                Please make sure to run 'flutter pub get' after version change
+                            </p>
+
+                            <img src="../images/app/app_version.png">
+                            </p>
+
+                        </section>
+
+
+                        <section id="themecolor">
+                            <h3>
+                                Change theme color
+                            </h3>
+                            <p>
+                                <b>For the new version(1.1.0) and newer:</b> GO to the admin panel Settings>App Settings
+                                there you will see theme color change section from there you just have to change color
+                                and save and restart the app.
+                            </p>
+                            <p>
+                                As you can see here you will have to pick color from here.
+                            </p>
+                            <img src="../images/app/theme_color.png">
+                            <p>
+                                Tap on any of the Color and you will see popup something like this below.
+                            </p>
+                            <img src="../images/app/tap_rgb.png">
+
+                            <p>
+                                <br>
+                                But the question is how will you set your colors? The answer is there is written R G B
+                                just tap on it.
+                            </p>
+                            <p>
+                                <img src="../images/app/hex.png">
+                            </p>
+                            <p>Now you can write your color code here and save it.</p>
+                            <p>
+                                If the application is restarted, you'll observe updated colors. However, in certain
+                                situations, if these colors fail to load then you will have to set for backup plan. What
+                                will it be?
+                            </p>
+                            <p>
+                                You can set fallback colors into the theme.dart so when there is something error then it
+                                will load local colors so your app will not stuck.
+
+                            <p>Lets see how you can set</p>
+                            <img src="../images/app/theme_color_file.png">
+                            <p>
+                                set the theme colors as shown above
+                            </p>
+                            </p>
+                        </section>
+                        <section id='languages'>
+                            <h3>Add language</h3>
+                            <p>Language is main factor of any app. If your users are not able to understand the language
+                                of the app so it will be not usefull. So today we will check how to add new language in
+                                the app.</p>
+                            <p>Go to assets/languages/</p>
+                            <img src="../images/app/template.png">
+                            <p>You can use any translation service. We have used <a
+                                    href='https://www.ibm.com/demos/live/watson-language-translator/self-service/home'>
+                                    IBM Language Translator</a>. Translate Web,App and Admin panel file. You will find
+                                web and admin file from the Admin panel languages tab.</p>
+
+                            <img src="../images/app/translate_files.png">
+
+                            <p>You have to add name of language in the fields and the language code.</p>
+                            <p>You can enable disable RTL(Right to left language) mode.</p>
+                            <img src="../images/app/admin_panel_language.png">
+                            <br>
+                            <br>
+                            <p>Save and restart the app you will see new language in the app. You can also update
+                                language from edit button.</p>
+                            <hr>
+
+                        </section>
+                        <section id="mapapikey">
+
+                            <h3>Map API Key</h3>
+                            <p>You will have to follow this steps to run google map in the app</p>
+                            <p>First you have to open <a href="https://console.cloud.google.com">cloud console</a></p>
+                            <p>Select the project</p>
+                            <img src="../images/app/cloudconsole.png">
+                            <br><br>
+                            <p>
+                                You have to enable <b style="color:purple"> Geocoding API</b>,<b
+                                    style="color:purple">Places API</b>,<b style="color:purple">
+                                    Geolocation APIs</b>,<b style="color:purple"> Map Sdk
+                                    for Android</b>, <b style="color:purple"> Map Sdk for
+                                    IOS</b>,<b style="color:purple"> Maps JavaScript API</b> from 'Enable API and
+                                Services'.
+                            </p>
+                            <img src="../images/app/enable_api_services.png">
+
+
+                            <p>After that you have to go to credentials section from there you can copy android and ios
+                                keys and for the android you can add the map key as shown below.</p>
+
+                            <p>
+                                For the android you have to navigate to android > app > src >main > AndroidManifest.xml
+                                file.
+                            </p>
+                            <img src="../images/app/android_map_key.png">
+                            <p>For the IOS you will have to navigate to ios/Runner/AppDelegate.swift</p>
+                            <img src="../images/app/ios_map_key.png">
+                            <p>Paste Ios key which you have copied from cloud console</p>
+
+                            <h4>Now what about Place api?</h4>
+
+                            <p>You will need to enable billing account in your project first so you can use this
+                                feature.</p>
+                            <p>You can check on google or youtube about enabling billing account.</p>
+                            <p>In the begining you have enabled Places API key so you will have add any key from cloud
+                                console in the admin panel, you can use android, ios , or you can create new one as
+                                well.</p>
+                            <p>Copy that key and open your admin panel. Go to the System setting section</p>
+                            <img src="../images/app/place_api_panel.png" style="width: 500px;">
+
+                            <p>Here you can see place API field just paste and save</p>
+                            <p style="color: red;">Note: Please ensure you have enabled billing account otherwise
+                                location search will not work in the app and panel and web.</p>
+                            <p>You have done this step successfully!!!!!</p>
+                            <div class="d-i"></div>
+                            <section id="admob">
+                                <h3>Setup admob</h3>
+                                <p>
+                                    To begin, create an AdMob account and set up three Ad Units:
+                                <ol>
+                                    <li>
+                                        Banner Ad
+                                    </li>
+                                    <li>
+                                        Interstitial Ad
+                                    </li>
+                                    <li>
+                                        Rewarded Ad
+                                    </li>
+                                </ol>
+
+                                Find your app ID here: <A
+                                    href="https://support.google.com/admob/answer/7356431?hl=en">https://support.google.com/admob/answer/7356431?hl=en</A>
+                                For Android, go to android/app/src/main/AndroidManifest.xml and enter android App Id as
+                                shown in below image.
+                                <img src="../images/app/admob_android.png">
+
+                                <p>
+                                    For IOS, go to ios/Runner/Info.plist and enter IOS App Id as shown in below image.
+                                    You can see here GADApplicationIdentifier.
+                                </p>
+                                <img src="../images/app/admob_ios.png">
+
+                                <p>
+                                    Paste your id of IOS in it.
+                                </p>
+
+                                <p>Now you will have to copy your Banner and Interstitial Ad ids and paste into admin
+                                    panel. First open admin panel and navigate to Settings> App Settings.</p>
+                                </p>
+                                <img src="../images/app/admob_admin.png">
+
+                                <p>Paste keys and save it. You can also disable ads in the app you can see there is
+                                    enable/disable button.</p>
+
+                            </section>
+
+                        </section>
+
+                        <section id="othericons">
+
+                            <h3>Other icons</h3>
+                            <p>There is other main icons as well which you will have to change according to your need.
+                            <p>So you can see below icons and their names.</p>
+                            <p>You can change Splash, HomeLogo , Placeholder from the admin panel.</p>
+                            </p>
+
+
+                            <div class="flex-container">
+                                <div class="flex-item">
+                                    <img src="../images/app/splash_screen.jpg" alt="Image 1">
+                                    <center> Splash logo + Company logo</center>
+                                </div>
+                                <div class="flex-item">
+                                    <img src="../images/app/homelogo.jpg" alt="Image 2">
+                                    <center> Home Logo</center>
+                                </div>
+                                <div class="flex-item">
+                                    <img src="../images/app/placeholder.jpg" alt="Image 3">
+                                    <center>Placeholder</center>
+                                </div>
+                            </div>
+                            <br>
+
+                            <p>
+                                Open admin panel and go to the Settings > App Settings there you will see something like
+                                this
+                            </p>
+                            <br>
+                            <img src="../images/app/change_icons_adminpanel.png" style="width:390px" alt="Image 3">
+                            <p>Upload SVG pictures <b style="color: red;"> [Note: Only .svg formate will work with
+                                    this]</b></p>
+                            <p>Save and restart, You will see new ions. but what about this also? what if it faild to
+                                load</p>
+                            <p>You will have to set fallback icons for this also</p>
+                            <p>Just navigate to assets/svg/ folder there is Fallback folder you will have to replace
+                                your main svg picture there so it will show when its not available or unable to load</p>
+
+
+                            <img src="../images/app/fallback_icons.png" style="width:300px" alt="Image 3">
+                            <p>
+                                Above you can see there is Fallback,Logo, and multi color svg folder.
+                            <p>You will have to set icons with same name in the fallback folder but set the name which
+                                is currently set.</p>
+                            </p>
+                            <p>
+                                If you wanna set your company logo you will have to replace logo with the logo which is
+                                located in Logo folder
+                            </p>
+
+                            You can also replace multi color svg<br><br>
+                            <p style="color:red">
+                                Note: Multicolor svgs will not change according to theme color. you will have to set the
+                                svg that can match your preffered colors. Automatic color adoption is not available for
+                                multi color
+                            </p>
+
+
+                            <!-- <div class="multi-image">
+                                <img src="../images/app/splash_screen.jpg">
+                                <img src="../images/app/homelogo.jpg">
+                                <img src="../images/app/placeholder.jpg">
+                            </div> -->
+
+
+
+
+
+
+
+                        </section>
+                        <div class="d-i"></div>
+                        <br>
+                        <section id="connectadminpanel">
+                            <h3>
+                                Connect Admin Panel
+                            </h3>
+                            <p>
+                                Note you will have to setup admin panel first otherwise app will not run. It will be
+                                stucked on splash screen.
+
+                            </p>
+                            <p>You can follow admin panel doc to learn how to setup <a href="../admin/">Click here</a>
+                            </p>
+                            <p>
+                                Go to settings.dart
+                            </p>
+                            <p>here you can see how to connect admin panel with app in below image.</p>
+                            <img src="../images/app/connect_admin.png" style="width:390px" alt="Image 3">
+                            <p>
+                                Above you can see host URL which simply means your admin panel URL. You will have to
+                                copy admin panel URL and paste into that host url field.
+                            </p>
+                            <p>API data load limit is the indicator that 20 data will load in one request. You can
+                                increase or decrese from settings.dart</p>
+                            <p>And the other one Max category load is the indicator that 5 categories will show in
+                                homescreen but other will show in show more button</p>
+                            <p>Now you done with admin panel connect!!!</p>
+                        </section>
+                        <section id="generateapp">
+                            <h3>Generating the App(Android)</h3>
+                            <p>Follow these step-by-step instructions to generate the app:</p>
+
+                            <ol>
+                                <li><strong>Generate Keystore:</strong></li>
+                                <p>Create a keystore to securely sign your Android application.</p>
+                                <ol type="a">
+                                    <li>Open the terminal or command prompt.</li>
+                                    <li>Navigate to the 'android/app' directory in your project.</li>
+                                    <li>Create a new keystore by running the following command:<br>
+                                    <li>For Mac/Linux:<br>
+                                        <code>keytool -genkey -v -keystore upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload</code>
+                                    </li>
+                                    <li>For Windows:<br>
+                                        <code>keytool -genkey -v -keystore upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+                                        </code>
+                                    </li>
+                                    </li>
+                                    <li>Follow the prompts to enter the required information, such as the keystore
+                                        password, distinguished name fields, and alias password.</li>
+                                    <li>Upon completion, the keystore file (e.g., 'your_keystore_name.keystore') will be
+                                        saved in the 'android/app' directory.</li>
+                                </ol>
+
+                                <li><strong>Configure key.properties:</strong></li>
+                                <p>Update the 'key.properties' file in the 'android' directory to store
+                                    keystore-related information.</p>
+                                <ol type="a">
+                                    <li>Open the 'key.properties' file in the 'android' directory.</li>
+                                    <li>Add the following lines to the file:<br>
+                                        <code>
+                                            storePassword=your_keystore_password<br>
+                                            keyPassword=your_alias_password<br>
+                                            keyAlias=your_alias_name<br>
+                                            storeFile=your_keystore_name.keystore
+                                        </code>
+                                    </li>
+                                    <li>Save the 'key.properties' file.</li>
+                                </ol>
+
+                                <li><strong>Split APK:</strong></li>
+                                <p>Generate split APKs to optimize the distribution of your application.</p>
+                                <ol type="a">
+                                    <li>Open the terminal or command prompt.</li>
+                                    <li>Navigate to your project directory.</li>
+                                    <li>Run the following command to build the split APKs:<br>
+                                        <code>flutter build apk --split-per-abi --no-tree-shake-icons</code>
+                                    </li>
+
+                                </ol>
+
+                                <li><strong>Release APK:</strong></li>
+                                <p>Create a final version of the APK suitable for distribution to end-users.</p>
+                                <ol type="a">
+                                    <li>Open the terminal or command prompt.</li>
+                                    <li>Navigate to your project directory.</li>
+                                    <li>Run the following command to build the release APK:<br>
+                                        <code>flutter build apk --release</code>
+                                    </li>
+
+
+                                </ol>
+
+                                <li><strong>App Bundle:</strong></li>
+                                <br>
+                                <strong>Note:</strong> <em>Before generating the App Bundle, ensure you have completed
+                                    the 'Update key.properties' step to configure your keystore information. Refer to
+                                    step 1 and 2 for details.</em><br>
+                                <p>Package the app as an Android App Bundle for efficient delivery and optimization on
+                                    the Play Store.</p>
+
+                                <ol type="a">
+
+                                    <li>Open the terminal or command prompt.</li>
+                                    <li>Navigate to your project directory.</li>
+                                    <li>Run the following command to build the app bundle:<br>
+                                        <code>flutter build appbundle --no-tree-shake-icons</code>
+                                    </li>
+
+
+                                </ol>
+                            </ol>
+                        </section>
+
+
+                    </section>
+
+
+
+
+                    <!---END Enable firebase auth section-->
+
+
+                    <hr class="divider">
+
+                    <section id="support">
+                        <h3>Support</h3>
+                        <p>Delighted to serve and support you! Contact our support team led by Muzammil Sumra on
+                            <a href="https://join.skype.com/invite/Wy96gZvdk2oW" target="_blank"
+                                style="color:#3c55d1">Skype</a>
+                        </p>
+                        <p>To help our customers, we constantly be in touch with every customer if they need any
+                            assistance regarding our product.
+                            We offer our customers a support from <strong> Mon – Fri 9.00am to 6.00pm IST (GMT
+                                +5.30) –
+                                We are a Team located in India – Asia.</strong></p>
+                        <p>Typically we reply our customers for all the questions and queries within 24 hours of
+                            time
+                            via comments, support forum or emails.</p>
+                    </section>
+                    <hr class="divider">
+
+                    <section id="rating">
+                        <h3>Your Feedback</h3>
+                        <p>Dear valuable customer,
+                            Thank you very much for choosing our product.
+                            It's our pleasure to serve top-notch service to you.
+                            Please give us your honest feedback that will help us to make a more strong and reliable
+                            product by click here <a href="https://codecanyon.net/downloads" style="color:#3c55d1"
+                                target="_blank">Rate Us</a>.
+                            Thank you very much.</p>
+                    </section>
+                    <hr class="divider">
+
+                    <section id="contactus">
+                        <h3>Contact Us</h3>
+                        <p>WRTeam has creative and dedicated group of developers who are mastered in Apps
+                            Developments
+                            and Web Application Development with a nice in delivering quality solutions to customers
+                            across the globe.
+                            Contact us today to find out how we can help you or for freelance work.
+                        </p>
+                        <p>Visit Us : <a href="https://wrteam.in/" target="_blank">https://wrteam.in</a>
+                        </p>
+                        <p>Mail Us : support@wrteam.in</p>
+                        <p>Thank you very much.</p>
+                    </section>
+                    <hr class="divider">
+
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Content end -->
+
+
+    </div>
+    <!-- Document Wrapper end -->
+
+    <!-- Back To Top -->
+    <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+            class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript
+        ============================ -->
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Easing -->
+    <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <!-- Custom Script -->
+    <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>
+
+
+<script>
+
+
+    window.onload = function () {
+
+        // var commands = document.getElementsByClassName("command");
+
+        // for (var i = 0; i < commands.length; i++) {
+
+        //     var copyButton = document.createElement("button");
+
+        //     var command = commands[i];
+        //     command.id = `command_${i}`;
+        //     copyButton.id = i;
+        //     copyButton.innerHTML = "&#x2398;";
+
+        //     copyButton.style.fontSize = "20px";
+        //     copyButton.style.height = "fit-content";
+        //     copyButton.style.border = "none";
+        //     copyButton.addEventListener("click", function () {
+        //         copyCommand(copyButton);
+        //     });
+        //     copyButton.addEventListener("mouseover", function () {
+        //         // Change the style when mouse is over the element
+        //         copyButton.style.backgroundColor = "rgb(200, 200, 200)";  // Change to your desired hover color
+        //     });
+
+        //     // Add an event listener for mouseout
+        //     copyButton.addEventListener("mouseout", function () {
+        //         // Change the style back when mouse leaves the element
+        //         copyButton.style.backgroundColor = "";  // Set to the original or desired background color
+        //     });
+        //     command.appendChild(copyButton);
+
+
+
+        // }
+        const imgTags = document.querySelectorAll('img');
+
+        // Iterate through each img tag
+
+
+
+        var preTags = document.getElementsByTagName("pre");
+        console.log(preTags);
+
+        for (var index = 0; index < preTags.length; index++) {
+            var div = document.createElement("DIV");
+            preTags[index].innerText = preTags[index].innerHTML;
+            preTags[index].style.backgroundColor = "pink";
+            preTags[index].width = "auto";
+            preTags[index].style.display = "inline";
+            preTags[index].style.padding = "3.5px";
+            var pretag = preTags[index];
+            pretag.id = `pre_${index}`;
+            div.innerHTML = `<button id='${index}' style='border:none' onclick='copy(this)'>Copy</button>`;
+
+            insertAfter(div, preTags[index]);
+            div.appendChild(pretag);
+        }
+    }
+    function insertAfter(newNode, referenceNode) {
+        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+    }
+
+    function copy(button) {
+        var preTag = document.getElementById(`pre_${button.id}`);
+        navigator.clipboard.writeText(preTag.innerHTML)
+            .then(() => {
+                button.innerHTML = "Copied!!";
+                setTimeout(function () {
+                    // Your function or code here
+                    button.innerHTML = "Copy";
+                }, 1000);
+                console.log(preTag.innerHTML)
+            })
+            .catch(err => {
+                console.error('Unable to copy text to clipboard', err);
+            });
+    }
+
+    function copyCommand(button) {
+        var command = document.getElementById(`command_${button.id}`);
+
+        command.removeChild(button);
+        navigator.clipboard.writeText(command.innerHTML.trim())
+            .then(() => {
+                button.innerHTML = "✓";
+                setTimeout(function () {
+                    // Your function or code here
+
+                }, 1000);
+                console.log(command.innerHTML.trim())
+                button.innerHTML = "&#x2398;";
+                command.appendChild(button);
+
+
+            })
+            .catch(err => {
+                console.error('Unable to copy text to clipboard', err);
+            });
+    }
+</script>
+
+<Style>
+    .command {
+        padding: 8px 8px;
+        background-color: rgb(212, 212, 212);
+        width: fit-content;
+    }
+
+    .command>button {
+        margin-left: 10px;
+    }
+
+    .multi-image {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .multi-image>img {
+        flex: 1;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .flex-item {
+        flex: 0 0 calc(33.33% - 10px);
+        /* Three items in a row with some spacing */
+        margin: 5px;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .flex-item img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .flex-item {
+            flex: 0 0 100%;
+            /* Full width for smaller screens */
+        }
+    }
+
+    .d-i {
+        width: 100%;
+        border: 1.5px dashed rgb(221, 221, 221);
+    }
+</Style>
+<script src="../assets/js/fslightbox.js"></script>
