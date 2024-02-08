@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link href="../images/favicon.ico" rel="icon" />
+    <title>Documentation | Ebroker</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Document Wrapper
+        =============================== -->
+    <div id="main-wrapper">
+
+        <!-- Header
+            ============================ -->
+        <header id="header" class="sticky-top">
+            <!-- Navbar -->
+            <nav class="primary-menu navbar navbar-expand-lg bg-light-1 navbar-dropdown-dark">
+                <div class="container-fluid">
+                    <!-- Sidebar Toggler -->
+                    <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none"
+                        type="button"><span></span><span class="w-75"></span><span></span></button>
+                    <!-- Logo -->
+                    <img src="../images/web/homelogo.svg" width="200" alt="logo" />
+                    <!-- Logo End -->
+                </div>
+            </nav>
+            <!-- Navbar End -->
+        </header>
+        <!-- Header End -->
+
+        <!-- Content
+            ============================ -->
+        <div id="content" role="main">
+
+            <!-- Sidebar Navigation
+                ============================ -->
+            <div class="idocs-navigation bg-light-1 docs-navigation-dark">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#introduction" class="nav-link active">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#admin_panel">Ebroker Admin Panel</a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#installation">Configure on your server</a>
+                            </li>
+
+                            <li class="nav-item"><a class="nav-link" href="#system-configurations">Set System
+                                    Configurations</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#pp">Set Privacy Policy</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#tc">Set Terms Conditions</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about_us">Set About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#firebase_settings">Firebase Settings</a>
+                            </li>
+
+                            <li class="nav-item"><a class="nav-link" href="#paypal_keys">Set Keys for
+                                    Paypal</a>
+                            </li>
+
+                            <li class="nav-item"><a class="nav-link" href="#paypalwebhook">Set Webhook URL for
+                                    Paypal</a>
+                            </li>
+
+
+                            <li class="nav-item"><a class="nav-link" href="#paystack_keys">Set Keys for
+                                    Paystack</a>
+                            </li>
+
+
+                            <li class="nav-item"><a class="nav-link" href="#paystackwebhook">Set Webhook URL for
+                                    Paystack</a>
+                            </li>
+
+
+                            <li class="nav-item"><a class="nav-link" href="#razorpaykeys">Set Keys for
+                                    Razoprpay</a>
+                            </li>
+
+                            <li class="nav-item"><a class="nav-link" href="#razorpaykwebhook">Set Webhook URL for
+                                    Razorpay</a>
+                            </li>
+
+                            <li class="nav-item"><a class="nav-link" href="#stripkeys">Set Keys for
+                                    Stripe</a>
+                            </li>
+
+
+                            <li class="nav-item"><a class="nav-link" href="#stripewebhook">Set Webhook URL for
+                                    Stripe</a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="#support" class="nav-link">Support</a></li>
+                    <li class="nav-item"><a href="#rating" class="nav-link">Your Feedback</a></li>
+                    <li class="nav-item"><a href="#contactus" class="nav-link">Contact Us</a></li>
+
+                </ul>
+            </div>
+
+
+            <!-- Docs Content  -->
+            <div class="idocs-content">
+                <div class="container">
+
+                    <!-- Getting Started -->
+                    <section id="introduction">
+
+                        <h3>Introduction</h3>
+                        <p class="">Thank you for purchasing code. It really means a lot and It's our pleasure to serve
+                            top-notch service to you. Thank you so much for choosing<a href="https://wrteam.in/"
+                                style='color:#3c55d1' target="_blank"> WRTeam </a>. If you have trouble with the code
+                            and documentation please contact to our Support Team <a href="#support"
+                                style="color:#3c55d1">Here</a></p>
+                    </section>
+
+                    <section id="admin_panel">
+                        <h3>Ebroker Admin Panel</h3>
+
+                        <section id="installation">
+                            <h4>How to Install Ebroker on Your shared hosting?</h4>
+                            <ol>
+                                <li>Create your domain or subdomain in your shared hosting</li>
+                                <li>Create an empty database in your shared hosting and remember this credentials:
+                                    <br /><span>i. database name</span>
+                                    <br /><span>ii. database username</span>
+                                    <br /><span>iii. database password</span>
+                                </li>
+                                <li>Upload your downloaded admin panel zip in your server , unzip it , head to php code
+                                    (version) folder , and move your all files to your root domain path<br>
+                                    Note :- .htaccess file is necessary , check that it exists , if not, on the hidden
+                                    file option and move to your admin panel's root file</li>
+                                <li>Now navigate to the url where your project is located.<br />
+                                    ex. mydomain.com or subdomain.mydomain.com
+                                </li>
+                                <li>The installation screen should appear and guide you in the process.</li>
+                            </ol>
+                            <p>Thats it! Now you are ready to run your first Ebroker : <b>https://ebroker.wrteam.me</b>
+                            </p>
+                            <b>Default Login Details</b><br>
+                            User: admin@gmail.com<br>
+                            Pass: admin123<br><br>
+                            <hr>
+                        </section>
+
+                        <section id="system-configurations">
+                            <h4>Set System Configurations</h4>
+                            <p>Company Details</p>
+                            <img src="../images/panel/company_details.png" alt='System Configurations'
+                                title='System Configurations'>
+                            <br>
+                            <br>
+                            <p>Payment Details</p>
+                            <br>
+                            <br>
+                            <img src="../images/panel/payment_details.png" alt='System Configurations'
+                                title='System Configurations'>
+                            <br>
+                            <br>
+                            <p>More Settings</p>
+                            <br>
+                            <br>
+                            <img src="../images/panel/more_settings.png" alt='System Configurations'
+                                title='System Configurations'>
+                            <br>
+                            <br>
+                            <p>Image Settings</p>
+                            <br>
+                            <br>
+                            <img src="../images/panel/image_settings.png" alt='System Configurations'
+                                title='System Configurations'>
+                            <br>
+                            <br>
+                        </section>
+
+                        <section id="pp">
+                            <h4>Set Privacy Policy</h4>
+                            <p>Set Privacy Policy for your website and app.</p>
+                            <img src="../images/panel/privacy_policy.png" />
+                            <hr>
+                        </section>
+
+                        <section id="tc">
+                            <h4>Set Terms Conditions</h4>
+                            <p>Set Terms Conditions for your website and app.</p>
+                            <img src="../images/panel/terms_conditions.png" />
+                            <hr>
+                        </section>
+
+                        <section id="about_us">
+                            <h4>About Us Content</h4>
+                            <p>Set and manage your about us content for app.</p>
+                            <img src="../images/panel/about_us.png" />
+                            <hr>
+                        </section>
+                        <section id="firebase_settings">
+                            <h4>Firebase Settings</h4>
+                            <p>Go to your web firebase project->settings->General</p>
+
+                            <img src="../images/panel/firebase_settings.png" />
+
+                            <br>
+                            <br>
+                            <p>
+
+                                Copy One by one Configuration values From this Section and add in Admin Panel ->
+                                Settings ->
+                                Firebase Settings
+                            </p>
+                            <br><br>
+                            <img src="../images/panel/system_firebase_settings.png" />
+
+
+
+                        </section>
+                        <section id="paypal_keys">
+                            <h4>Paystack Keys Settings</h4>
+
+                            <p>Step 1:Login to Paystack Dashboard</p>
+                            <p>Step 2:Go to Account Settings -> Account Owner Information</p>
+                            <p>Step 3:click on update in email section </p>
+
+                            <img src="../images/panel/paypalkey1.png" />
+
+                            <p>here is your business email </p>
+
+                            <img src="../images/panel/paypalkeys2.png" />
+
+
+                            <p>Step 4:Copy Email and paste it in admin panel system
+                                settings</p>
+
+                            <img src="../images/panel/paypal_settings.png" />
+
+                        </section>
+
+                        <section id="paypalwebhook">
+                            <h4>Paypal Webhook Settings</h4>
+
+
+
+
+                            <p>Step 1:Login to Paypal Dashboard</p>
+                            <br>
+                            <p>Step 2:Click Profile Settings</p>
+
+                            <br>
+
+                            <br>
+                            <br>
+                            <img src="../images/panel/paypal(step1).png" />
+
+
+                            <br>
+
+                            <p>Step 3:Go to Website Payments -> instant payment notification</p>
+
+                            <br>
+                            <img src="../images/panel/paypal(step2).png" />
+
+
+                            <br>
+                            <br>
+
+                            <p>Step 4 : click Edit Settings </p>
+                            <img src="../images/panel/paypal(step3).png" />
+
+                            <br>
+                            <br>
+                            <p>Copy paypal Webhook from Admin panel</p>
+                            <br>
+                            <p>Settings->System Settings and paste here</p>
+
+
+                            <br>
+                            <img src="../images/panel/paypal(step4).png" />
+
+
+                            <br>
+                            <br>
+
+                            <br>
+                            <br>
+
+
+
+
+                        </section>
+
+
+
+                        <section id="paystack_keys">
+                            <h4>Paystack Keys Settings</h4>
+
+                            <p>Step 1:Login to Paystack Dashboard</p>
+                            <p>Step 2:Go to get Started section you can find Your Test Keys Section </p>
+
+
+                            <img src="../images/panel/ps_keys.png" />
+                            <p>Step 3:Copy Test secret key and Test Public Key and paste it in admin panel system
+                                settings</p>
+
+                            <img src="../images/panel/ps_settings.png" />
+
+                        </section>
+
+
+
+                        <section id="paystackwebhook">
+                            <h4>paystack Webhook Settings</h4>
+                            <ol>
+
+
+
+                                <p>Step 1:Login to paystack Dashboard</p>
+                                <br>
+                                <p>Step 2:Click Settings</p>
+
+
+                                <br>
+                                <p>Step 3:Click API keys and webhooks</p>
+
+
+                                <br>
+                                <p>Copy paypal Webhook from Admin panel</p>
+                                <br>
+                                <p>Settings->System Settings and paste here</p>
+
+
+                                <br>
+                                <br>
+                                <img src="../images/panel/paystack(step1).png" />
+
+
+                                <br>
+
+                                </li>
+
+                            </ol>
+                        </section>
+
+
+
+
+
+                        <section id="razorpaykeys">
+                            <h4>Razoprpay Keys Settings</h4>
+
+                            <p>Step 1:Login to Razorpay Dashboard</p>
+                            <p>Step 2:Click API keys</p>
+
+                            <img src="../images/panel/rz_1.png" />
+
+
+
+
+                            <img src="../images/panel/rz_keys(1).png.png" />
+                            <br>
+
+
+
+
+                            <p>Step 4:Copy keys one by one and paste it in admin panel system
+                                settings</p>
+
+                            <img src="../images/panel/rz_settings.png" />
+
+                        </section>
+
+                        <section id="razorpaykwebhook">
+                            <h4>Razorpay Webhook Settings</h4>
+                            <ol>
+
+
+
+                                <p>Step 1:Login to paystack Dashboard</p>
+                                <br>
+                                <p>Step 2:Click Account Settings</p>
+
+
+                                <br>
+                                <p>Step 3:Click webhooks</p>
+
+
+
+                                <br>
+
+                                <p>Step 4:Click Add New Webhook</p>
+
+
+
+                                <br>
+                                <img src="../images/panel/razorpay(step1).png" />
+
+
+                                <br>
+
+
+                                <br>
+
+                                <p>Copy paypal Webhook from Admin panel</p>
+                                <br>
+                                <p>Settings->System Settings and paste here</p>
+
+
+                                <br>
+
+
+                                <br>
+
+                                <img src="../images/panel/razorpay(step2).png" />
+
+
+                            </ol>
+                        </section>
+
+                        <section id="stripkeys">
+                            <h4>Stripe Keys Settings</h4>
+
+                            <p>Step 1:Login to Stripe Dashboard</p>
+                            <p>Step 2:Click API keys</p>
+
+
+                            <img src="../images/panel/stripe(keys).png" />
+                            <p>Step 3:Copy publishable key and secret keys and paste it in admin panel system
+                                settings</p>
+
+                            <img src="../images/panel/stripe_settings.png" />
+
+                        </section>
+
+
+                        <section id="stripewebhook">
+                            <h4>Stripe Webhook Settings</h4>
+                            <ol>
+                                <p>Step 1:Login to Stripe Dashboard</p>
+                                <br>
+                                <p>Step 2:Click Webhooks</p>
+                                <p>Step 3:Click Add endpoint</p>
+
+
+                                <br>
+
+                                <br>
+                                <br>
+
+
+
+
+
+                                <img src="../images/panel/stripe(step1).png" />
+
+                                <br>
+
+
+
+
+                                <p>Step 5:click on select events</p>
+
+
+                                <br>
+
+                                <img src="../images/panel/stripe(step2).png" />
+
+
+                                <br>
+                                <br>
+
+                                <p>Step 6 : click add events </p>
+
+                                <img src="../images/panel/Stripe(step3).png" />
+
+                                <br>
+                                <br>
+                                <p>Then click on add End Point</p>
+                                <br>
+
+
+                                <br>
+                                <br>
+
+
+
+                            </ol>
+                        </section>
+
+
+
+
+
+                        <section id="unspalshapisetting">
+                            <h4>Unspash API Key Settings</h4>
+                            <ol>
+
+
+
+                                <p>Step 1:Login to https://unsplash.com/developers</p>
+                                <br>
+                                <p>Step 2:Click your apps</p>
+
+
+
+                                <br>
+                                <img src="../images/panel/unsplash1.png" />
+
+                                <br>
+
+
+
+
+                                <p>Step 5:click on New Application</p>
+
+
+                                <br>
+                                <img src="../images/panel/unsplash2.png" />
+
+
+                                <br>
+                                <br>
+
+                                <p>Step 6 : Check all checkboxes and click on Accept Terms</p>
+
+                                <img src="../images/panel/unsplash3.png" />
+
+                                <br>
+                                <br>
+                                <p>Step :7 Write application name and description then click on create Application
+                                </p>
+                                <br>
+                                <img src="../images/panel/unsplash4.png" />
+
+                                <br>
+                                <p>Step :8 copy access key from here and paste in system settings.</p>
+
+
+                                <br>
+                                <a href="../images/panel/unsplash5.png" >
+                                    <img class="figure-img img-fluid shadow rounded" src="../images/panel/unsplash5.png"
+                                        alt="SmartKitPro">
+                                </a>
+
+
+                            </ol>
+                        </section>
+
+
+
+
+
+
+
+
+
+                    </section>
+
+                    <hr class="divider">
+
+                    <section id="support">
+                        <h3>Support</h3>
+                        <p>Delighted to serve and support you! Contact our support team led by Muzammil Sumra on
+                            <a href="https://join.skype.com/invite/Wy96gZvdk2oW" target="_blank"
+                                style="color:#3c55d1">Skype</a>
+                        </p>
+                        <p>To help our customers, we constantly be in touch with every customer if they need any
+                            assistance regarding our product.
+                            We offer our customers a support from <strong> Mon – Fri 9.00am to 6.00pm IST (GMT +5.30) –
+                                We are a Team located in India – Asia.</strong></p>
+                        <p>Typically we reply our customers for all the questions and queries within 24 hours of time
+                            via comments, support forum or emails.</p>
+                    </section>
+                    <hr class="divider">
+
+                    <section id="rating">
+                        <h3>Your Feedback</h3>
+                        <p>Dear valuable customer,
+                            Thank you very much for choosing our product.
+                            It's our pleasure to serve top-notch service to you.
+                            Please give us your honest feedback that will help us to make a more strong and reliable
+                            product by click here <a
+                                href="https://codecanyon.net/item/ebroker-real-estate-property-buyrentsell-flutter-app-with-laravel-admin-panel/reviews/44393724" style="color:#3c55d1" target="_blank">Rate Us</a>.
+                            Thank you very much.</p>
+                    </section>
+                    <hr class="divider">
+
+                    <section id="contactus">
+                        <h3>Contact Us</h3>
+                        <p>WRTeam has creative and dedicated group of developers who are mastered in Apps Developments
+                            and Web Application Development with a nice in delivering quality solutions to customers
+                            across the globe.
+                            Contact us today to find out how we can help you or for freelance work.
+                        </p>
+                        <p>Visit Us : <a href="https://wrteam.in/" target="_blank">https://wrteam.in</a>
+                        </p>
+                        <p>Mail Us : support@wrteam.in</p>
+                        <p>Thank you very much.</p>
+                    </section>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Content end -->
+
+
+    </div>
+    <!-- Document Wrapper end -->
+
+    <!-- Back To Top -->
+    <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+            class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript
+        ============================ -->
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Easing -->
+    <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <!-- Custom Script -->
+    <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>
