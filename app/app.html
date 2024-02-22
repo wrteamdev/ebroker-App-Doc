@@ -88,6 +88,8 @@
                                 <a class="nav-link" href="#languages">Add Languages</a>
                                 <a class="nav-link" href="#mapapikey">Map API Key and Place API</a>
                                 <a class="nav-link" href="#admob">Setup admob</a>
+                                <a class="nav-link" href="#setupnativedeeplink">Setup Native Deep Link</a>
+                                <a class="nav-link" href="#setupinapppurchaseios">Setup In App Purchase(IOS)</a>
 
                             </li>
                         </ul>
@@ -348,6 +350,8 @@
                     <section class="docs-section" id="setupdynamiclink">
                         <h2>How to enable Firebase dynamic links</h2>
                         <div class="container">
+                            <b style="color: red;"> [Note: Firebase dynamic links are deprecated we recommend using
+                                native deep link, by default firebase dynamic link will work]</b>
                             <ol>
                                 <li>GO to firebase console and click on dynamic links</li>
                                 <li>And tap on get started</li>
@@ -702,7 +706,107 @@
                                     enable/disable button.</p>
 
                             </section>
+                            <section id="setupnativedeeplink">
+                                <h3>Setup Native Deep Link</h3>
+                                <p>
+                                    By default firebase dynamic links are enabled to enable this native deep link
+                                    functionality you can follow this steps.
+                                </p>
+                                <p>
+                                    You will find these two files in the code. One is for android and one is for
+                                    ios.(You will get it by default in your web version code you just have to modify the
+                                    files if you don't want to use web version you will have to upload this two files on
+                                    any domain you want and manage it by your own.)
+                                </p>
+                                <img src="../images/app/nativedeeplink/well_knows.png" style="width: 50%;"
+                                    height="150px">
+                                <p>
+                                    in the appplinksfile.png you have to set your app's package name and sha key for
+                                    debug and release sha key.
+                                </p>
+                                <img src="../images/app/nativedeeplink/applinksfile.png">
+                                <br>
+                                <p>After this step open app apple-app-site-association file</p>
+                                <p>
+                                    add your apple team id and package name as shown below. make sure you seperate by
+                                    (.)
+                                </p>
 
+                                <img src="../images/app/nativedeeplink/app-assosiation.png">
+                                <p>
+                                    make .well-known folder on server root of your web domain if not available there or
+                                    upload on any domain you want for deep link
+                                </p>
+
+                                <p>
+                                    Add(in DOMAIN HERE) your web domain or domain link where you have uploaded well
+                                    known folder.
+                                </p>
+
+                                <img src="../images/app/nativedeeplink/androidmanifest.png">
+                                <p>
+                                    Also you have to enable native deep link from settings.dart.
+                                </p>
+
+                                <img src="../images/app/nativedeeplink/native_setting.png">
+                                <p>Set deepLinkingType to native and set your domain.</p>
+                                <p>
+                                    Go to info.plist file and add your domain here.
+                                </p>
+                                <p>
+                                    <img src="../images/app/nativedeeplink/info_plist_native.png" style="width: 50%;">
+
+                                </p>
+                                <p>
+                                    Go to Runner.entitlements file and set your domain like as shown below.
+
+                                </p>
+                                <img src="../images/app/nativedeeplink/runner.png">
+                                <p>Now you can test the deep linking. Thank you!</p>
+
+                            </section>
+                            <section id="setupinapppurchaseios">
+                                <h3>Setup In App Purchase (iOS)</h3>
+                                <b style="color: red;">Note: Currently in app purchase is only available for iOS. By
+                                    default in iOS in app purchase will work</b>
+                                <p>
+                                    You have to setup in app purchase if you want to use iOS.
+                                </p>
+                                <p>
+                                    First go to in app purchase in your appstore connect.
+
+                                </p>
+                                <img src="../images/app/iap/iap.png">
+                                <p>
+                                    Click on plus icon to create package.
+                                </p>
+                                <p>
+                                    Set unique package id and select consumable product
+                                </p>
+                                <img src="../images/app/iap/iap_create_package.png">
+
+                                <p>Select countries which you want to enable.</p>
+                                <img src="../images/app/iap/iap_select_countries.png">
+                                <p>You have to set price for in app purchase.</p>
+
+                                <img src="../images/app/iap/iap_set_price.png">
+                                <p>Create package in admin panel. Make sure the product id must be same as created in
+                                    App Store.</p>
+                                <p>You have to update all the packages with product id otherwise it will not show in ios
+                                    platfrom.</p>
+                                <img src="../images/app/iap/iap_in_admin.png" style="width: 50%;">
+                                <p>You will have to set aggriments for Paid Apps in your appstore connect Agreement
+                                    section</p>
+                                <img src="../images/app/iap/paid_apps.png">
+
+
+
+
+
+
+
+
+                            </section>
                         </section>
 
                         <section id="othericons">
