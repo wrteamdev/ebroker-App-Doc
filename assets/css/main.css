@@ -11,6 +11,7 @@ body {
   background-size: cover;
   background-position: center center;
   position: relative;
+  height: fit-content;
 }
 
 .back {
@@ -108,9 +109,14 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: 200px 0;
+  padding: 350px 0;
 }
-
+@media only screen and (max-width:1980px) {
+  .doc {
+  padding: 200px 0;
+  
+}
+}
 .doc .card {
   margin-bottom: 20px;
   border-radius: 10px;

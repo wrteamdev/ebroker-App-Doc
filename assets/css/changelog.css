@@ -7,15 +7,21 @@
 body {
   background-color: #212428;
   background-color: #000;
-  background-image: url("../../images/back.jpg");
+  background-image: url("../../images/Doc_BG.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   position: relative;
+  height: fit-content;
 }
-
+.navbar img{
+  filter: brightness(0) invert(1) !important;
+ 
+}
 .changelog {
-  margin: 50px auto;
+  padding: 200px 0;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .title {
@@ -26,6 +32,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 50px;
+  color: #fff;
 }
 
 .wrapper {
@@ -91,7 +98,7 @@ button:focus {
 }
 
 .green {
-  background-color: green;
+  background-color: #087c7c;
   border-radius: 5px;
   padding: 10px;
 }
