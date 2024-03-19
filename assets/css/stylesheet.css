@@ -3496,3 +3496,137 @@ section img {
 .ul_area {
     list-style-type: none;
 }
+
+
+.main_box {
+    background-color: #f6f7f8;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+
+.warning_box{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: rgba(255, 186, 0, .15);
+    border-left: 10px solid #4d3800;
+    border-radius: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+}
+.inform_box{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: rgba(84,199,236,.15);
+    border-left: 10px solid #4cb3d4;
+    border-radius: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+}
+.red_warning_box{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: rgba(250,56,62,.15);
+    border-left: 10px solid #e13238;
+    border-radius: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+}
+.tip_box{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: rgba(0,164,0,.15);
+    border-left: 10px solid #009400;
+    border-radius: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+}
+.warning_box .main_title,
+.inform_box .main_title,
+.red_warning_box .main_title,
+.tip_box .main_title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    text-transform: capitalize;
+}
+.inform_box .main_title {
+    color: #193c47;
+}
+.tip_box .main_title {
+    color: #003100;
+   font-weight: bold;  
+}
+.red_warning_box .main_title {
+    color: #4b1113;
+   font-weight: bold;  
+}
+.warning_box .main_title h6,
+.inform_box .main_title h6,
+.red_warning_box .main_title h6{
+   font-weight: bold;  
+}
+
+.red_warning_box span{
+    color: #4b1113;
+}
+.tip_box span{
+    color: #003100;
+}
+.tip_box h6{
+    color: #003100;
+   font-weight: bold;  
+
+}
+.red_warning_box span a{
+    color: #4b1113;
+    font-weight: bold;
+
+}
+.red_warning_box  span code{
+    background-color: rgba(250,56,62,.15);
+    border-color: rgba(250,56,62,.15);
+    color: #4b1113 !important;
+    margin-right: 10px;
+}
+.warning_box code{
+background-color: rgba(255,186,0,.15);
+border: 1px solid rgba(255,186,0,.15);
+color: #4d3800 !important;
+}
+.video_show {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 60px 0;
+}
+.video_iframe{
+    width: 100%;
+    height: 100%;
+    border: 12px;
+}
