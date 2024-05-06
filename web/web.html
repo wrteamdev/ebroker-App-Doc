@@ -102,6 +102,9 @@
                         <a class="nav-link" href="#IframeKey">How to add your Address Iframe Key</a>
                      </li>
                      <li class="nav-item">
+                        <a class="nav-link" href="#googleAdSence">How to Add Google AdSence</a>
+                     </li>
+                     <li class="nav-item">
                         <a class="nav-link" href="#howToRunWebProject">How to run Web project</a>
                      </li>
                      <li class="nav-item">
@@ -115,6 +118,10 @@
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="#nextjsdeploy">Next JS Deployment
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#uploadHtaccess">Upload .htaccess file
                         </a>
                      </li>
                   </ul>
@@ -245,7 +252,7 @@
                               </ol> -->
                      </section>
                      <section id="howToIntegrateFirebase">
-                     
+
                         <div class="warning_box" style="margin-top: 20px; margin-bottom: 20px;">
                            <div class="main_title">
                               <span class="warning_icon"><i class="fas fa-exclamation-triangle"></i></span>
@@ -396,10 +403,13 @@
                            </li>
                            </li>
                            <li>Go to your admin panel
-                              <code>Settings → Web settings → Image Settings → Placeholder Imag</code>
+                              <code>Settings → Web settings → Image Settings → Placeholder Image</code>
+                           </li>
+                           <li>Go to your admin panel
+                              <code>Settings → Web settings → Image Settings → Footer Logo</code>
                            </li>
                            </li>
-                           <img src="../images/web/new_layout_web_logo.png" alt="eBroker" />
+                           <img src="../images/web/change-logo.png" alt="eBroker" />
                         </ol>
                         <hr>
                      </section>
@@ -425,25 +435,54 @@
                         </ol>
                         <hr>
                      </section>
+                     <section id="googleAdSence">
+                        <h4>
+                           <li>How to Add Google AdSence</li>
+                        </h4>
+                        <ol>
+                           <li>Go to <a href="https://AdSence.google.com/start/" target="_blank">Google AdSence</a> and
+                              sigin your account and Add site as per Image</a>
+                           </li>
+                           <img src="../images/web/adsence.png" alt="eBroker" />
+                           </li>
+                           <li>click on Let's Go button</code>
+                           </li>
+                           <img src="../images/web/letsGoadsence.png" alt="eBroker" />
+                           </li>
+                           <li>Copy this script code and paste to your <code>src</code> -> <code>pages</code> ->
+                              <code>_document.js</code>
+                           </li>
+                           <img src="../images/web/first_verify.png" alt="eBroker" />
+                           <img src="../images/web/adsence-script.png" alt="eBroker" />
+                           </li>
+                           <li>after script add you need to run command for build folder npm run export and upload to
+                              your server. and after click on verify button in google adsence</li>
+                           <img src="../images/web/verify.png" alt="eBroker" />
+                           <li>If it says <code> Getting ready </code> your account is still under review and your site
+                              will not display ads until it has been approved.</li>
+                           <img src="../images/web/under_re.png" alt="eBroker" />
+                        </ol>
+                        <hr>
+                     </section>
                      <section id="howToRunWebProject">
                         <h4>
                            <li>How to run this project</li>
                         </h4>
                         <ol>
-                         <div class="main_box">
+                           <div class="main_box">
 
-                            <h6>
-                               Open VS Code teminal by typing <b>CTRL+J</b> in Windows/Linux, and for MacOS
-                              <b>CMD+J</b> and execute the command <br> <b>npm i</b>
-                              <br>
-                              This will take some time to download a few Packages so wait for a few minutes.
-                            </h6>
-                           <h6> After <b>npm i</b> finishes run this command <br> <b>npm run dev</b>
-                              <br>
-                              This Command will Start the development mode.Check If everything is working fine
-                              then your are good to go ahead.
-                           </h6>
-                        </div>
+                              <h6>
+                                 Open VS Code teminal by typing <b>CTRL+J</b> in Windows/Linux, and for MacOS
+                                 <b>CMD+J</b> and execute the command <br> <b>npm i</b>
+                                 <br>
+                                 This will take some time to download a few Packages so wait for a few minutes.
+                              </h6>
+                              <h6> After <b>npm i</b> finishes run this command <br> <b>npm run dev</b>
+                                 <br>
+                                 This Command will Start the development mode.Check If everything is working fine
+                                 then your are good to go ahead.
+                              </h6>
+                           </div>
                         </ol>
                         <hr>
 
@@ -473,18 +512,22 @@
                         </h4>
                         <ol>
                            <div class="main_box">
-                           <h6> After all the changes, you are ready to deploy your Web application on a live server.
-                           </h6>
-                           <h6> Open the VS Code terminal by typing <b>CTRL+J</b> in Windows/Linux or <b>CMD+J</b> for
-                              MacOS and execute the command <b>npm run export</b>. This will take a few seconds to build
-                              the live and optimized version of the web application.</h6>
-                           <h6> After the process completion, go to the <code> out </code> folder and upload these files
-                              to your live server (only upload files from the <b>out</b> folder).</h6>
-                           <h6> If you encounter any deployment-related problems, you can follow the official document:
-                              <a href="https://nextjs.org/docs/pages/building-your-application/deploying">Next.js
-                                 Deployment</a>
-                           </h6>
-                        </div>
+                              <h6> After all the changes, you are ready to deploy your Web application on a live server.
+                              </h6>
+                              <h6> Open the VS Code terminal by typing <b>CTRL+J</b> in Windows/Linux or <b>CMD+J</b>
+                                 for
+                                 MacOS and execute the command <b>npm run export</b>. This will take a few seconds to
+                                 build
+                                 the live and optimized version of the web application.</h6>
+                              <h6> After the process completion, go to the <code> out </code> folder and upload these
+                                 files
+                                 to your live server (only upload files from the <b>out</b> folder).</h6>
+                              <h6> If you encounter any deployment-related problems, you can follow the official
+                                 document:
+                                 <a href="https://nextjs.org/docs/pages/building-your-application/deploying">Next.js
+                                    Deployment</a>
+                              </h6>
+                           </div>
                         </ol>
                         <hr>
                      </section>
@@ -510,12 +553,7 @@
                                  your site.
                               </span>
                            </div>
-                           <!-- <h4 style="color: red;">Note: If you possess a VPS server along with some familiarity with <a
-                                 href="https://nodejs.org/docs/latest/api/">Node.js</a>, <a
-                                 href="https://docs.npmjs.com/">npm</a>, and <a
-                                 href="https://pm2.keymetrics.io/docs/usage/quick-start/">pm2</a>, you're well-equipped
-                              to delve into the Advanced SEO section. Otherwise, feel free to skip this part and deploy
-                              your site.</h4> -->
+
                            <li>
                               if you have VPS server then go to <code>.env file </code> and make it
                               "true"<code>NEXT_PUBLIC_SEO="true"</code>
@@ -674,18 +712,22 @@
                                     href="https://pm2.keymetrics.io/docs/usage/quick-start/">official documentation</a>
                               </span>
                            </div>
-
-                           <!-- <li>
-                              You needs a bit of knowledge about this reference link of packages and technologies <br>
-
-                              <code>  <b>Node js</b> :</code> <a href="https://nodejs.org/docs/latest/api/"
-                                 target="_blank">https://nodejs.org/docs/latest/api/</a><br>
-                              <code> <b>npm</b> :</code> <a href="https://docs.npmjs.com/"
-                                 target="_blank">https://docs.npmjs.com/</a><br>
-                              <code> <b>pm2</b> :</code> <a href="https://pm2.keymetrics.io/docs/usage/quick-start/"
-                                 target="_blank">https://pm2.keymetrics.io/docs/usage/quick-start/</a>
-                           </li> -->
                         </ol>
+                     </section>
+
+                     <section id="uploadHtaccess">
+                        <h4>
+                           <li>Upload .htaccess file
+                           </li>
+                        </h4>
+                        <div class="warning_box">
+                           <div class="main_title">
+                              <span class="warning_icon"><i class="fas fa-exclamation-triangle"></i></span>
+                              <h6>MANDATORY</h6>
+                           </div>
+                           <b>You are required to add the provided <code>.htaccess</code> file to your web code on your
+                              server.</b>
+                        </div>
                      </section>
 
                   </ol>
