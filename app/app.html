@@ -175,6 +175,11 @@
                             <br>
                             <br>
                             <li>Copy and paste both command one by one like this</li>
+                            <h6 style="color: rgb(248, 38, 38);">Note:[If you face any issue while installing Flutter
+                                Fire tool or
+                                running firebase command you will have to setup firebase manually. It will not be part
+                                of support if the Official SDKs does not work. ] <a href="#manualfirebasesetup">Click
+                                    here for manually setup firebase</a></a> </h6>
                             <br>
                             <br>
                             <img src="../images/app/command_run_firebase.png">
@@ -201,7 +206,84 @@
 
                         </section>
 
+
+
                         <br />
+
+                    </section>
+                    <section id="manualfirebasesetup">
+                        <h4>Manual Firebase Setup</h4>
+                        <h6>If the above setup is not working or you are facing issue while setup with flutter fire sdk
+                            then use this method.</h6>
+
+
+
+                        <h5>Setting Up Firebase</h5>
+                        <p>Firebase is a platform developed by Google for creating mobile and web applications. It
+                            provides a variety of tools and services to help you develop high-quality apps. Follow these
+                            steps to set up Firebase for your app.</p>
+
+                        <h5>Prerequisites</h5>
+                        <ul>
+                            <li>A Google account</li>
+                            <li>Basic knowledge of Android/iOS development</li>
+                            <li>Installed Android Studio/Xcode</li>
+                        </ul>
+
+                        <h5>Step 1: Create a Firebase Project</h5>
+                        <ol>
+                            <li>Go to the <a href="https://console.firebase.google.com/">Firebase Console</a>.</li>
+                            <li>Click on the "Add project" button.</li>
+                            <li>Enter a project name and click "Continue".</li>
+                            <li>(Optional) Enable Google Analytics for your project, then click "Continue".</li>
+                            <li>Configure your Google Analytics settings if you enabled it, then click "Create project".
+                            </li>
+                            <li>Once your project is ready, click "Continue".</li>
+                        </ol>
+
+                        <h5>Step 2: Add Firebase to Your Android App</h5>
+                        <ol>
+                            <li>In the Firebase Console, select your project.</li>
+                            <li>Click on the Android icon to add a new Android app to your project.</li>
+                            <li>Register your app with your app's package name (found in your
+                                <code>AndroidManifest.xml</code>).
+                            </li>
+                            <li>Download the <code>google-services.json</code> file and place it in the
+                                <code>android/app</code> directory of your Flutter project.
+                            </li>
+                        </ol>
+
+
+
+
+                        <h5>Step 3: Add Firebase to Your iOS App</h5>
+                        <ol>
+                            <li>In the Firebase Console, select your project.</li>
+                            <li>Click on the iOS icon to add a new iOS app to your project.</li>
+                            <li>Register your app with your iOS app's bundle ID.</li>
+                            <li>Download the <code>GoogleService-Info.plist</code> file.</li>
+                            <li>Add the <code>GoogleService-Info.plist</code> file to your Flutter project:
+                                <ul>
+                                    <li>Place it in the <code>ios/Runner</code> directory.</li>
+                                    <li>Open Xcode, right-click on the project name in the project navigator, and select
+                                        "Add Files to [your project name]".</li>
+                                    <li>Select the <code>GoogleService-Info.plist</code> file you downloaded.</li>
+                                </ul>
+                            </li>
+                        </ol>
+
+
+
+
+                        <h2>Conclusion</h2>
+                        <p>You've successfully set up Firebase for your Android and iOS apps. Now you can start
+                            integrating Firebase services such as Firestore, Authentication, and Analytics to
+                            enhance
+                            your app.</p>
+
+
+
+
 
                     </section>
 
@@ -1235,3 +1317,29 @@
     }
 </Style>
 <script src="../assets/js/fslightbox.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #333;
+    }
+
+    pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+
+    code {
+        background-color: #f4f4f4;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+</style>
