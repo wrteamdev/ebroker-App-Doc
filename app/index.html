@@ -71,7 +71,7 @@
                                 <a class="nav-link" href="#createfirebaseproject">Create Firebase Project</a>
                                 <a class="nav-link" href="#enablephoneauth">Enable Phone Auth</a>
                                 <a class="nav-link" href="#setupnotification">Setup Notification</a>
-                                <a class="nav-link" href="#setupdynamiclink">Setup Firebase Dynamic Link</a>
+                                
                             </li>
 
                         </ul>
@@ -87,6 +87,7 @@
                                 <a class="nav-link" href="#themecolor">Theme Colors</a>
                                 <a class="nav-link" href="#languages">Add Languages</a>
                                 <a class="nav-link" href="#mapapikey">Map API Key and Place API</a>
+                                <a class="nav-link" href="#setupdynamiclink">Setup Firebase Deep Link</a>
                                 <a class="nav-link" href="#admob">Setup admob</a>
 
                             </li>
@@ -345,87 +346,7 @@
                     </section>
 
 
-                    <section class="docs-section" id="setupdynamiclink">
-                        <h2>How to enable Firebase dynamic links</h2>
-                        <div class="container">
-                            <ol>
-                                [Note: this is deprecated we recommend using native deep link]
-                                <li>GO to firebase console and click on dynamic links</li>
-                                <li>And tap on get started</li>
-                                <br>
-                                <a href="../images/app/deeplink/1.png" data-fslightbox="gallery">
-                                    <img src="../images/app/deeplink/1.png" alt="eBroker"
-                                        class="figure-img img-fluid shadow rounded">
-                                </a>
-                                <br>
-
-                                <li>Set your link name like: projectname.page.link</li>
-                                <br>
-
-                                <a href="../images/app/deeplink/2.png" data-fslightbox="gallery">
-                                    <img src="../images/app/deeplink/2.png" alt="eBroker"
-                                        class="figure-img img-fluid shadow rounded">
-                                </a>
-                                <br>
-
-                                <li>Your link has been created now you can copy link and paste it in your
-                                    lib/settings.dart file. There you will find deepLinkPrefix named variable.</li>
-                                <br>
-
-                                <a href="../images/app/deeplink/3.png" data-fslightbox="gallery">
-                                    <img src="../images/app/deeplink/3.png" alt="eBroker"
-                                        class="figure-img img-fluid shadow rounded">
-                                </a>
-                                <br>
-
-                                <li>Go to info.plist file in ios folder and add this code</li>
-                                <br>
-
-                                <a href="../images/app/deeplink/code.png" data-fslightbox="gallery">
-                                    <img src="../images/app/deeplink/code.png" alt="eBroker"
-                                        class="figure-img img-fluid shadow rounded">
-                                </a>
-                                <br>
-
-                                <div class="rawHTML">
-                                    <key>FirebaseDynamicLinksCustomDomains</key>
-                                    <array>
-                                        <string>https://ebroker.page.link</string>
-                                    </array>
-                                </div>
-                                <br>
-
-                                <li>And open ios folder in XCode and follow this</li>
-                                <br>
-
-                                <a href="../images/app/deeplink/xcode.png" data-fslightbox="gallery">
-                                    <img src="../images/app/deeplink/xcode.png" alt="eBroker"
-                                        class="figure-img img-fluid shadow rounded">
-
-
-
-
-
-
-                                </a>
-                                <p>
-                                <h4>For the android</h4>
-
-
-                                </p>
-                                <p>Copy the link.</p>
-                                <p>Open the settings.dart</p>
-                                <p>There you will see variable static const String deepLinkPrefix =
-                                    "PASTE";</p>
-
-                                <img src="../images/app/deep_link_prefix.png" data-fslightbox="gallery">
-                                <img src="../images/app/deep_link_name.png" data-fslightbox="gallery">
-                                <p>You have succesfully setup dynamic link.!!!</p>
-
-                            </ol>
-
-                        </div>
-                    </section>
+                   
 
                     <section id="settings">
                         <h1>General app settings</h1>
@@ -615,6 +536,7 @@
                             <hr>
 
                         </section>
+                        
                         <section id="mapapikey">
 
                             <h3>Map API Key</h3>
@@ -662,6 +584,75 @@
                                 location search will not work in the app and panel and web.</p>
                             <p>You have done this step successfully!!!!!</p>
                             <div class="d-i"></div>
+                            <section class="docs-section" id="setupdynamiclink">
+                                <h2>How to setup deep link?</h2>
+                                <div class="container">
+                                    <ol>
+                                        <li>First of all download this google files from the link : Server Side Deeplink Files
+                                        </li>
+                                        <li>Open both files in the any text editor and follow below steps</li>
+                                        <li>
+                                            <br>
+                                            <a href="../images/app/deeplink/deep_link_1.webp" data-fslightbox="gallery">
+                                                <img src="../images/app/deeplink/deep_link_1.webp" alt="eBroker"
+                                                    class="figure-img img-fluid shadow rounded">
+                                            </a>
+                                            <br>
+                                        </li>
+                                        <li>
+                                            <br>
+        
+                                            <a href="../images/app/deeplink/deep_link_2.webp" data-fslightbox="gallery">
+                                                <img src="../images/app/deeplink/deep_link_2.webp" alt="eBroker"
+                                                    class="figure-img img-fluid shadow rounded">
+                                            </a>
+                                            <br>
+                                        </li>
+        
+                                        <li>After above changes save both files (Note- Keep name proper same of both files)</li>
+        
+        
+                                        <li>Open server > Go to admin panel root folder</li>
+                                        <li>You will get .well-known folder on root directory</li>
+                                        <li>If you dont get that folder from setting enable setting visible hidden files then
+                                            check</li>
+                                        <li>After the change setting still you don't find the files, Create new directory named
+                                            .well-known (Makesure name starts with dot[.])</li>
+                                        <li>Add both above saved files inside the .well-known folder.</li>
+                                        <li>In server > admin panel root folder you will get .htaccess file, Open it and do
+                                            changes as per below image.</li>
+                                        <li>
+                                            <br>
+        
+                                            <a href="../images/app/deeplink/deep_link_3.webp" data-fslightbox="gallery">
+                                                <img src="../images/app/deeplink/deep_link_3.webp" alt="eBroker"
+                                                    class="figure-img img-fluid shadow rounded">
+                                            </a>
+                                            <br>
+                                        </li>
+                                        <li>For further steps open customer app code in android studio and follow below steps.</li>
+                                        <li>
+                                            <br>
+        
+                                            <a href="../images/app/deeplink/deep_link_4.webp" data-fslightbox="gallery">
+                                                <img src="../images/app/deeplink/deep_link_4.webp" alt="eBroker"
+                                                    class="figure-img img-fluid shadow rounded">
+                                            </a>
+                                            <br>
+                                        </li>
+                                        <li>
+                                            <br>
+        
+                                            <a href="../images/app/deeplink/deep_link_5.webp" data-fslightbox="gallery">
+                                                <img src="../images/app/deeplink/deep_link_5.webp" alt="eBroker"
+                                                    class="figure-img img-fluid shadow rounded">
+                                            </a>
+                                            <br>
+                                        </li>
+                                    </ol>
+        
+                                </div>
+                            </section>
                             <section id="admob">
                                 <h3>Setup admob</h3>
                                 <p>
@@ -705,7 +696,7 @@
                             </section>
 
                         </section>
-
+                        
                         <section id="othericons">
 
                             <h3>Other icons</h3>
