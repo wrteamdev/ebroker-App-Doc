@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212428;
+  background-color: #000;
+  background-image: url("../../images/Doc_BG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  height: fit-content;
+}
+.navbar img{
+  filter: brightness(0) invert(1) !important;
+ 
+}
+.changelog {
+  padding: 200px 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 54px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.wrapper {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.105);
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.toggle,
+.content {
+  font-family: "Poppins", sans-serif;
+}
+
+.toggle {
+  width: 100%;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.content {
+  position: relative;
+  font-size: 14px;
+  text-align: justify;
+  line-height: 30px;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  font-weight: 400;
+}
+
+.content ul li {
+  margin: 20px auto;
+  color: #ffffffd9;
+}
+
+.content ul li span {
+  color: #fff;
+}
+
+.green {
+  background-color: #087c7c;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.improve {
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.fix {
+  background-color: rgb(255, 2, 2);
+  border-radius: 5px;
+  padding: 10px;
+}
